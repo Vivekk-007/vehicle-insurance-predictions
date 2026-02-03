@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
@@ -7,6 +8,8 @@ from starlette.responses import HTMLResponse, RedirectResponse
 from uvicorn import run as app_run
 
 from typing import Optional
+
+import uvicorn
 
 # Importing constants and pipeline modules from the project
 from src.constants import APP_HOST, APP_PORT
@@ -142,4 +145,5 @@ async def predictRouteClient(request: Request):
 
 # Main entry point to start the FastAPI server
 if __name__ == "__main__":
-    app_run(app, host=APP_HOST, port=APP_PORT)
+    port = int(os.getenv("PORT", 8000))
+    app_run(app, host="0.0.0.0", port=port)
