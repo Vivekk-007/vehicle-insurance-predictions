@@ -19,4 +19,31 @@ uvicorn
 jinja2
 imblearn
 streamlit
+python-dotenv
+# Core
+python-dotenv
+fastapi
+uvicorn
+python-multipart
+
+# Data & ML
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+plotly
+
+# Database
+pymongo
+
+# AWS
+boto3
+
+# Others
+jinja2
+PyYAML
+dill
+from_root
+certifi
 -e .
